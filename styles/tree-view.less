@@ -15,10 +15,17 @@
 }
 
 .tree-view {
+  // tree-view file colors are primarly controled in the list.less > list-tree
+  // this makes sure the correct colors are used if another package
+  // adds any text to the tree-view
   color: @text-color;
   background-color: @tree-view-background-color;
 
-  .list-item.selected {
-    color: @text-color-selected;
+  .list-item{
+    .selected {
+      color: @text-color-selected;
+    }
+    // mixin for git.less > git-status
+    .git-status;
   }
 }
